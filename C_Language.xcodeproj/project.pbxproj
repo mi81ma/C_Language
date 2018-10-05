@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		69C26BCC2166363200883892 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 69C26BCB2166363200883892 /* main.swift */; };
+		69C26BD52166365000883892 /* C.c in Sources */ = {isa = PBXBuildFile; fileRef = 69C26BD42166365000883892 /* C.c */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +24,7 @@
 
 /* Begin PBXFileReference section */
 		69C26BC82166363200883892 /* C_Language */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = C_Language; sourceTree = BUILT_PRODUCTS_DIR; };
-		69C26BCB2166363200883892 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		69C26BD42166365000883892 /* C.c */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.c; path = C.c; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +57,7 @@
 		69C26BCA2166363200883892 /* C_Language */ = {
 			isa = PBXGroup;
 			children = (
-				69C26BCB2166363200883892 /* main.swift */,
+				69C26BD42166365000883892 /* C.c */,
 			);
 			path = C_Language;
 			sourceTree = "<group>";
@@ -94,6 +94,7 @@
 				TargetAttributes = {
 					69C26BC72166363200883892 = {
 						CreatedOnToolsVersion = 10.0;
+						LastSwiftMigration = 1000;
 					};
 				};
 			};
@@ -119,7 +120,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				69C26BCC2166363200883892 /* main.swift in Sources */,
+				69C26BD52166365000883892 /* C.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -244,9 +245,17 @@
 		69C26BD02166363200883892 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5T37M7ZUW;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C_Language/C_Language-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Debug;
@@ -254,9 +263,16 @@
 		69C26BD12166363200883892 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = K5T37M7ZUW;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "C_Language/C_Language-Bridging-Header.h";
 				SWIFT_VERSION = 4.2;
 			};
 			name = Release;
