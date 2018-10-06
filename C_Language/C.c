@@ -1,26 +1,28 @@
 
-
 #include <stdio.h>
 
-void main(){
-    // "This is test line" into Array "a[]"
-    static char a[25] = "This is test line.";
+/*
+ 代入演算子を用いた計算
+ */
 
-    // declare int b
-    int b;
+void main()
+{
+    /* 使用する変数の定義 */
+    int a1 = 2, b1 = 2, c1 = 2, d1 = 2; // 変数の宣言(1)
+    int a2 = 2, b2 = 2, c2 = 2, d2 = 2; // 変数の宣言(2)
+                                        // 普通の演算子による計算と代入
+    a1 = a1 + 1;
+    b1 = b1 - 1;
+    c1 = c1 * 2;
+    d1 = d1 / 2;
 
-    // 300 as hexadecimal number into b
-    b = 0x300;
-
-    // %s is to represent a[] as String
-    printf(" **** Strings is : %s ****\n", a);
-
-    // %x is to represent b as hexadecimal number
-    printf(" **** Value   is : %x ****\n", b);
-
-
-    // Output the following:
-    //  **** Strings is : This is test line. ****
-    //  **** Value   is : 300 ****
-
+    // 代入演算による計算
+    a2 += 1;    // a2 = a2 + 1;
+    b2 -= 1;    // b2 = b2 - 1;
+    c2 *= 2;    // c2 = c2 * 2;
+    d2 /= 2;    // d2 = d2 / 2;
+    printf("a1=%d b1=%d c1=%d d1=%d\n", a1, b1, c1, d1);
+    printf("a2=%d b1=%d c1=%d d1=%d\n");
 }
+
+
